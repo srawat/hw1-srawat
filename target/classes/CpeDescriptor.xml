@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cpeDescription>
+    <collectionReader>
+        <collectionIterator>
+            <descriptor>
+                <import location="./fileReaderDescriptor.xml"/>
+            </descriptor>
+        </collectionIterator>
+    </collectionReader>
+    <casProcessors casPoolSize="1" processingUnitThreadCount="1">
+		<casProcessor deployment="integrated" name="Gene Annotator">
+	        <descriptor>
+                <import location ="./GeneAnnotatorDescriptor.xml"/>
+            </descriptor>
+            <deploymentParameters/>
+            <filter></filter>
+            <errorHandling>
+                <errorRateThreshold action="terminate" value="100/1000"/>
+                <maxConsecutiveRestarts action="terminate" value="30"/>
+                <timeout max="100000"/>
+            </errorHandling>
+            <checkpoint batch="10000"/>
+        </casProcessor>
+		<casProcessor deployment="integrated" name="Gene Consumer">
+            <descriptor>
+                <import location="./GeneConsumerDescriptor.xml"/>
+            </descriptor>
+            <deploymentParameters/>
+            <filter></filter>
+            <errorHandling>
+                <errorRateThreshold action="terminate" value="100/1000"/>
+                <maxConsecutiveRestarts action="terminate" value="30"/>
+                <timeout max="10000"/>
+            </errorHandling>
+            <checkpoint batch="10000"/>
+        </casProcessor>
+    </casProcessors>
+    <cpeConfig>
+        <numToProcess>-1</numToProcess>
+        <deployAs>immediate</deployAs>
+        <checkpoint file="" time="300000"/>
+        <timerImpl></timerImpl>
+    </cpeConfig>
+</cpeDescription>
