@@ -4,7 +4,7 @@
     <collectionReader>
         <collectionIterator>
             <descriptor>
-                <import location="./fileReaderDescriptor.xml"/>
+                <import location="./FileReaderDescriptor.xml"/>
             </descriptor>
         </collectionIterator>
     </collectionReader>

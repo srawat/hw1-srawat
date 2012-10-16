@@ -26,7 +26,7 @@
     </configurationParameterSettings>
     <typeSystemDescription>
       <imports>
-        <import name="typeSystemDescriptor"/>
+        <import name="GeneTypeSystemDescriptor"/>
       </imports>
     </typeSystemDescription>
     <typePriorities/>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
-  <name>typeSystemDescriptor</name>
-  <description/>
+  <name>GeneTypeSystemDescriptor</name>
+  <description>Type System for the GENE TAG Named Entity Recognizer</description>
   <version>1.0</version>
-  <vendor/>
+  <vendor>CMU</vendor>
   <types>
     <typeDescription>
       <name>GeneTAG</name>
-      <description/>
+      <description>Annotation representing the GENE Named Entity</description>
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
         <featureDescription>
           <name>SentenceID</name>
-          <description>Stores the ID of the sentence which contains the current TAG</description>
+          <description>Stores the ID of the sentence which contains the current Gene TAG Annotation</description>
           <rangeTypeName>uima.cas.String</rangeTypeName>
         </featureDescription>
       </features>

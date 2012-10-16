@@ -44,16 +44,18 @@ public class FileReader extends CollectionReader_ImplBase {
 	 */
 	public void initialize() throws ResourceInitializationException {
 		// Get the input file
-		File inputFile = new File(
-				((String) getConfigParameterValue(PARAM_INPUTFILE)).trim());
+		String inputFilePath = ((String) getConfigParameterValue(PARAM_INPUTFILE))
+				.trim();
+		File inputFile = new File(inputFilePath);
 
 		// Initialize the current index to zero
 		mCurrentIndex = 0;
 
 		// if input file does not exist or is not a directory, throw exception
 		if (!inputFile.exists() || inputFile.isDirectory()) {
-			System.out.println("Input File Not Found");
-			throw new ResourceInitializationException();
+			throw new ResourceInitializationException(
+					ResourceInitializationException.RESOURCE_DATA_NOT_VALID,
+					new Object[] { inputFilePath, "InputFilePath" });
 		}
 
 		// Read the sentences from file and store them in a list

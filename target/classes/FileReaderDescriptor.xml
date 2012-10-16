@@ -3,14 +3,14 @@
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
   <implementationName>FileReader</implementationName>
   <processingResourceMetaData>
-    <name>fileReaderDescriptor</name>
-    <description>This will read in the file</description>
+    <name>FileReaderDescriptor</name>
+    <description>Collection reader for reading Input file containing list of sentences with Gene Mentions.</description>
     <version>1.0</version>
-    <vendor/>
+    <vendor>CMU</vendor>
     <configurationParameters>
       <configurationParameter>
         <name>InputFile</name>
-        <description>The path of the input string</description>
+        <description>The path of the Input File containing sentences with Gene Mentions</description>
         <type>String</type>
         <multiValued>false</multiValued>
         <mandatory>true</mandatory>
