@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>edu.cmu.lti.11791.f12.hw1</groupId>
   <artifactId>hw1-srawat</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <repositories>
     <repository>
       <id>oaqa</id>
@@ -103,6 +103,11 @@
       <groupId>edu.washington.cs.knowitall.stanford-corenlp</groupId>
       <artifactId>stanford-postag-models</artifactId>
       <version>1.3.2</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.aliasi</groupId>
+    	<artifactId>lingpipe</artifactId>
+    	<version>4.1.0</version>
     </dependency>
   </dependencies>
   <scm>
