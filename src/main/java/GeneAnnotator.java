@@ -1,13 +1,12 @@
 import java.io.File;
 import java.io.IOException;
-import java.util.regex.Pattern;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 
-//Import files from lingpipe
+//Import files from LingPipe
 import com.aliasi.chunk.Chunker;
 import com.aliasi.chunk.Chunking;
 import com.aliasi.chunk.Chunk;
@@ -79,16 +78,15 @@ public class GeneAnnotator extends JCasAnnotator_ImplBase {
 		String docID = docText.substring(0, spaceIndex);
 		String text = docText.substring(spaceIndex + 1);
 
+		
 		Chunking chunking = LingPipeGeneChunker.chunk(text);
-		int offset = docID.length();
+		int offset = docID.length()+1; //Sentence ID + <white-space>
 		for (Chunk chunk : chunking.chunkSet()) {
-			// found one - create annotation
+			//Ling Pipe Classifier found a GENE. Add it to the annotation
 			GeneTAG annotation = new GeneTAG(aJCas);
-			annotation.setBegin(offset + chunk.start() + 1);
+			annotation.setBegin(offset + chunk.start());
 			annotation.setEnd(offset + chunk.end());
 			annotation.setSentenceID(docID);
-			// System.out.println(docID+" "+chunk.start()+" "+chunk.end()+" "+text.substring(chunk.start(),
-			// chunk.end()));
 			annotation.addToIndexes();
 		}
 	}

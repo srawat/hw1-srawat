@@ -28,7 +28,6 @@ public class FileReader extends CollectionReader_ImplBase {
 	 * Name of configuration parameter that must be set to the path of Input
 	 * File
 	 */
-
 	public static final String PARAM_INPUTFILE = "InputFile";
 
 	// Stores all the sentences in the input file

@@ -126,7 +126,7 @@ public class GeneConsumer extends CasConsumer_ImplBase {
 				int nonWSBegin = countNonWS(DocText.substring(annot
 						.getSentenceID().length() + 1, annot.getBegin()));
 				int nonWSEnd = countNonWS(DocText.substring(annot
-						.getSentenceID().length() + 1, annot.getEnd()));
+						.getSentenceID().length() + 1, annot.getEnd()-1));
 				fileWriter.write(annot.getSentenceID() + "|" + nonWSBegin + " "
 						+ nonWSEnd + "|" + aText + "\n");
 				fileWriter.flush();
