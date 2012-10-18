@@ -20,7 +20,7 @@
       <nameValuePair>
         <name>OutputFilePath</name>
         <value>
-          <string>src/main/resources/data/hw1-srawat.out</string>
+          <string>hw1-srawat.out</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>

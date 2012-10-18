@@ -30,41 +30,38 @@ public class GeneTAG extends Annotation {
 
 	/** @generated */
 	@Override
-	public int getTypeIndexID() {
-		return typeIndexID;
-	}
-
+	public int getTypeIndexID() {return typeIndexID;}
+ 
 	/**
 	 * Never called. Disable default constructor
 	 * 
 	 * @generated
 	 */
-	protected GeneTAG() {/* intentionally empty block */
-	}
-
+	protected GeneTAG() {/* intentionally empty block */}
+    
 	/**
 	 * Internal - constructor used by generator
 	 * 
 	 * @generated
 	 */
 	public GeneTAG(int addr, TOP_Type type) {
-		super(addr, type);
-		readObject();
-	}
-
+    super(addr, type);
+    readObject();
+  }
+  
 	/** @generated */
 	public GeneTAG(JCas jcas) {
-		super(jcas);
-		readObject();
-	}
+    super(jcas);
+    readObject();   
+  } 
 
 	/** @generated */
 	public GeneTAG(JCas jcas, int begin, int end) {
-		super(jcas);
-		setBegin(begin);
-		setEnd(end);
-		readObject();
-	}
+    super(jcas);
+    setBegin(begin);
+    setEnd(end);
+    readObject();
+  }   
 
 	/**
 	 * <!-- begin-user-doc --> Write your own initialization here <!--
@@ -85,13 +82,10 @@ public class GeneTAG extends Annotation {
 	 * @generated
 	 */
 	public String getSentenceID() {
-		if (GeneTAG_Type.featOkTst
-				&& ((GeneTAG_Type) jcasType).casFeat_SentenceID == null)
-			jcasType.jcas.throwFeatMissing("SentenceID", "GeneTAG");
-		return jcasType.ll_cas.ll_getStringValue(addr,
-				((GeneTAG_Type) jcasType).casFeatCode_SentenceID);
-	}
-
+    if (GeneTAG_Type.featOkTst && ((GeneTAG_Type)jcasType).casFeat_SentenceID == null)
+      jcasType.jcas.throwFeatMissing("SentenceID", "GeneTAG");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((GeneTAG_Type)jcasType).casFeatCode_SentenceID);}
+    
 	/**
 	 * setter for SentenceID - sets Stores the ID of the sentence which contains
 	 * the current TAG
@@ -99,10 +93,7 @@ public class GeneTAG extends Annotation {
 	 * @generated
 	 */
 	public void setSentenceID(String v) {
-		if (GeneTAG_Type.featOkTst
-				&& ((GeneTAG_Type) jcasType).casFeat_SentenceID == null)
-			jcasType.jcas.throwFeatMissing("SentenceID", "GeneTAG");
-		jcasType.ll_cas.ll_setStringValue(addr,
-				((GeneTAG_Type) jcasType).casFeatCode_SentenceID, v);
-	}
-}
+    if (GeneTAG_Type.featOkTst && ((GeneTAG_Type)jcasType).casFeat_SentenceID == null)
+      jcasType.jcas.throwFeatMissing("SentenceID", "GeneTAG");
+    jcasType.ll_cas.ll_setStringValue(addr, ((GeneTAG_Type)jcasType).casFeatCode_SentenceID, v);}    
+  }

@@ -17,7 +17,7 @@ import com.aliasi.util.AbstractExternalizable;
  * Gene TAG Annotator. It uses the Ling Pipe toolkit to perform Gene TAG
  * Annotation. The model that we are using for this implementation is called
  * pos-en-bio-medpost.HiddenMarkovModel. It is trained on GenTAG dataset and
- * uses a Hidden Markov Model for named entiry recognition. The model can be
+ * uses a Hidden Markov Model for named entity recognition. The model can be
  * downloaded from here
  * http://alias-i.com/lingpipe/demos/models/ne-en-bio-genetag.HmmChunker
  * 
@@ -78,7 +78,7 @@ public class GeneAnnotator extends JCasAnnotator_ImplBase {
 		String docID = docText.substring(0, spaceIndex);
 		String text = docText.substring(spaceIndex + 1);
 
-		
+		//Running the First Best Named Entity chuking 
 		Chunking chunking = LingPipeGeneChunker.chunk(text);
 		int offset = docID.length()+1; //Sentence ID + <white-space>
 		for (Chunk chunk : chunking.chunkSet()) {
