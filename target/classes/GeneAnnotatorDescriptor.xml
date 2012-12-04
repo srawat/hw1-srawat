@@ -21,7 +21,7 @@
       <nameValuePair>
         <name>LingPipeModelPath</name>
         <value>
-          <string>src/main/resources/ne-en-bio-genetag.HmmChunker</string>
+          <string>ne-en-bio-genetag.HmmChunker</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>
